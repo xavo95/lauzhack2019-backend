@@ -1,0 +1,18 @@
+'use strict';
+
+var mongoose = require('mongoose');
+
+
+/////////////////////////////////////////////////// MONGOOSE MODEL ///////////////////////////////////////////////////
+
+
+var ContractSchema = new mongoose.Schema({
+    status: {type: String, required: true},
+    createdAt: {type: Date, default: Date.now}
+});
+
+
+////////////////////////////////////////////////////// EXPORTS //////////////////////////////////////////////////////
+
+
+module.exports = mongoose.model('Contract', ContractSchema);
